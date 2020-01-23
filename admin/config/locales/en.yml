@@ -705,6 +705,7 @@ en:
           title: Content for %{content}
         form:
           all_blocks: All blocks
+          block_name: Block Name
           cancel: Cancel
           devices: Devices
           display: Display

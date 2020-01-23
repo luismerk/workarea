@@ -11,13 +11,11 @@
     - else
       = link_to "← #{t('workarea.admin.content.form.all_blocks')}", '#', data: { content_editor_form_cancel: '' }
 
-  .grid.grid--middle.grid--center.grid--auto
-    .grid__cell
-      = content_block_icon(block.icon, title: block.name, class: 'svg-icon svg-icon--gray')
-    .grid__cell
-      %span.content-editor__form-heading= block.name
-
 .content-editor__form-fields
+  .property
+    = label_tag 'block_custom_name', t('workarea.admin.content.form.block_name'), class: 'property__name'
+    = text_field_tag 'block[custom_name]', block.name, id: nil, class: 'text-box text-box--i18n'
+
   .tabs
     - block.fieldsets.each do |fieldset|
       .tabs__panel
