@@ -60,6 +60,7 @@ module Workarea
     def process
       ProcessProductRecommendations.new.perform
       GenerateInsights.generate_all!
+      Insights::TrendingSearches.generate_monthly!
     end
   end
 end
